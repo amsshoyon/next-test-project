@@ -1,7 +1,7 @@
 import { toast } from 'react-toastify';
 import CurrencyFormat from 'react-currency-format';
 
-export const Trancate =  (str: String, limit: Number) => {
+export const Trancate =  (str: string, limit: number) => {
     if(str.length <= limit) return str;
     return str.slice(0, limit) + "..."
 }
@@ -14,7 +14,7 @@ export const Notify = (msg: String, type: string = 'info') => {
     });
 }
 
-export const MoneyFormat = ({amount, currency = "৳ "}) => {
+export const MoneyFormat = (amount: number, currency: string = "৳ ") => {
     return <>
         {amount && amount > 0 ?
             <CurrencyFormat value={amount.toFixed(2)} displayType={'text'} thousandSeparator={true} prefix={currency} />
@@ -23,7 +23,7 @@ export const MoneyFormat = ({amount, currency = "৳ "}) => {
     </>
 }
 
-export const Percentage = ({price, prevPrice}) => {
+export const Percentage = (price: number, prevPrice: number) => {
     let percent = 0;
 
     if(price !== 0 && prevPrice !== 0) percent = Math.round(((price - prevPrice) / prevPrice) * 100);
