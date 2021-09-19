@@ -3,15 +3,15 @@ import { MoneyFormat } from '../../../../misc/common';
 import style from './Voucher.module.scss'
 import { useDispatch } from 'react-redux';
 import { Dispatch } from 'redux';
-import { addCoupon } from '../../../../store/cart/actions';
 
 const Voucher = () => {
     const [showCoupon, setShowCoupon] = React.useState(false);
+    const [coupons, setCoupons] = React.useState<any[]>([]);
     const ref = React.useRef(null);
     const dispatch: Dispatch<any> = useDispatch()
 
     const applyVoucher = (code: string) => {
-        dispatch(addCoupon(code))
+        // dispatch(addCoupon(code))
     }
     
     const handleClickOutside = (event: any) => {
@@ -27,7 +27,6 @@ const Voucher = () => {
         };
     }); 
 
-    const [coupons, setCoupons] = React.useState(null);
 	
 	React.useEffect(() => {
 		fetch('/coupon.json')
