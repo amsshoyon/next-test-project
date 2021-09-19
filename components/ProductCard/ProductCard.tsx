@@ -11,7 +11,6 @@ type Props = {
 	addToCart: (product: CartData | any) => void
 }
 
-
 const ProductCard: React.FC<Props> = ({data}) => {    
     const dispatch: Dispatch<any> = useDispatch()
 
