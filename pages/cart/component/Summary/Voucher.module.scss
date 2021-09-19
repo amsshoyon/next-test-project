@@ -1,0 +1,84 @@
+.voucher{
+    .inputGroup{
+        display: flex;
+        align-items: center;
+        border: 1px solid #E8E8E8;
+        border-radius: 3px 0px 0px 3px;
+        height: 36px;
+        input{
+            border: none;
+            height: 100%;
+            padding: 8px 12px;
+            max-width: 100%;
+            width: 100%;
+            &::placeholder{
+                color: #C9C9C9;
+            }
+        }
+        button{
+            height: 100%;
+            width: 80px;
+            border: none;
+            border-left: 1px solid #E8E8E8;
+            border-radius: 0px 3px 3px 0px;
+            background-color: #FBFBFB ;
+            color: #B5B5B5;
+        }
+    }
+}
+
+.accordicon{
+    position: relative;
+
+    &__content{
+        border: 1px solid #ECECEC;
+        border-radius: 10px;
+        padding: 10px;
+        position: absolute;
+        width: 100%;
+        top: calc(100% + 10px);
+        left: 50%;
+        transform: translateX(-50%) translateY(-15px);
+        background-color: #fff;
+        visibility: hidden;
+        opacity: 0;
+        transition: .3s ease-in-out;
+        &__show {
+            visibility: visible;
+            opacity: 1;
+            transform: translateX(-50%) translateY(0px);
+        }
+    }
+}
+.code{
+    max-height: 510px;
+    overflow-y: auto;
+    padding-right: 10px;
+
+    &::-webkit-scrollbar-track {
+        border-radius: 3px;
+        background: rgb(255,255,255);
+        background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 30%, rgba(233,233,233,1) 30%, rgba(233,233,233,1) 70%, rgba(255,255,255,1) 70%, rgba(255,255,255,1) 100%);
+        opacity: .1;
+        cursor: pointer;
+        width: 12px;
+    }
+    
+    &::-webkit-scrollbar {
+        width: 12px;
+        background-color: #F5F5F5;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        background-color: #b5b5b5;
+        width: 12px;
+    }
+
+    &__single{
+        border-radius: 10px;
+        background-color: rgba(#FF6F00, 0.03);
+        padding: 9px 15px;
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,160 @@
+html,
+body {
+    min-height: 100vh;
+    font-size: $baseFontSize + px;
+    font-family: $fontPrimary;
+    padding: 0;
+    margin: 0;
+    color: $bodyTextColor;
+    background: $bodyBg;
+    font-style: normal;
+    line-height: 1.5;
+    font-weight: 400;
+    -webkit-text-size-adjust: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    max-width: 1230px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.icon {
+    font-size: rem(25);
+    line-height: 1;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.text-right {
+    text-align: right;
+}
+.text-center {
+    text-align: center;
+}
+
+.line-through{
+    text-decoration: line-through;
+}
+.h-line{
+    width: 100%;
+    border-top: dashed 2px #e4e4e4;
+}
+
+.badge{
+    background-color: rgba(#FF6F00, .12);
+    border-radius: 50px;
+    padding: 3px 10px;
+    line-height: 1;
+    color: $primaryColor;
+}
+.cursor-pointer{
+    cursor: pointer;
+}
+
+.image-wrapper{
+    &>div {
+        position: unset !important;
+        width: 100% !important;
+        height: 100% !important;
+        &>div{
+            display: none !important;
+        }
+    }
+    .image {
+        object-fit: contain;
+        object-position: center;
+        width: 100% !important;
+        position: relative !important;
+        height: unset !important;
+    }
+}
+.radius-4{
+    border-radius: 4px !important;
+}
+// grid
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -8px;
+}
+
+
+[class*="col-"] {
+    padding: 0 8px;
+    width: 100%;
+}
+
+.col-3 {
+    max-width: calc(100% / 4);
+    width: 100%;
+}
+
+.col-8{
+    max-width: 75%;
+}
+
+.col-4{
+    max-width: 25%;
+}
+
+// flexBox
+.flex {
+    display: flex;
+}
+
+.flex-column{
+    flex-direction: column;
+}
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-start {
+    justify-content: flex-start;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.align-start {
+    align-items: flex-start;
+}
+
+.align-end {
+    align-items: flex-end;
+}
+
+// Borders
+@include borderClasses;
+
+
+// Card
+.card{
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid #ECECEC;
+    &__header{
+        padding: 13px 20px;
+        border-bottom: 1px solid #ECECEC;
+    }
+    &__body{
+        padding: 13px 20px;
+    }
+    &__footer{
+        padding: 13px 20px;
+    }
+}

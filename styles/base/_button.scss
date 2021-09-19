@@ -1,0 +1,19 @@
+.btn {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    &__trans {
+        border: none;
+        box-shadow: none;
+        background-color: transparent;
+    }
+
+    &.btn-primary {
+        background-color: $primaryColor;
+        border-radius: 50px;
+        padding: 8px 10px;
+        color: #fff;
+        border: none;
+    }
+}

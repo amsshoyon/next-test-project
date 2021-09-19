@@ -1,0 +1,9 @@
+[
+    { "code": "discount1", "discount": 30, "type": "flat" },  
+    { "code": "discount2", "discount": 40, "type": "percentage" },  
+    { "code": "discount3", "discount": 50, "type": "flat" },  
+    { "code": "discount4", "discount": 65 , "type": "percentage"},  
+    { "code": "discount5", "discount": 10, "type": "flat" },  
+    { "code": "discount6", "discount": 70 , "type": "percentage"},  
+    { "code": "discount7", "discount": 92 , "type": "flat"}
+]
